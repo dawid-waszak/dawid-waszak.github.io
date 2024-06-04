@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mediaqueries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+<body class="main-content">
+    <nav>
+        <div class="nav-btn nav-home active-btn" data-id="home">
+            <i class="fa-solid fa-house"></i> Strona główna
+        </div>
+        <div class="nav-btn nav-about" data-id="about">
+            <i class="fa-solid fa-user"></i> O mnie
+        </div>
+        <div class="nav-btn nav-projects" data-id="projects">
+            <i class="fa-solid fa-folder"></i> Projekty
+        </div>
+        <div class="nav-btn nav-contact" data-id="contact">
+            <i class="fa-solid fa-envelope"></i> Kontakt
+        </div>
+    </nav>
+    <header id="home">
+        <div class="header-content">
+            <div class="left-header">
+                <h1 class="introduction">Cześć, jestem <br><span class="my-name">Dawid Waszak</span></h1>
+                <p>Od dziecka zainteresowałem się programowaniem. Zaczynałem od tworzenia gier w programach typu <i>Raycasting Game Maker</i>, czy <i>Multimedia Fusion 2</i>. Natomiast później zgłębiałem wiedzę dotyczącą języków programowania...</p>
+                <div class="btn-con btn-about">
+                    Dowiedz się więcej
+                </div>
+            </div>
+            <div class="right-header">
+                <div class="circle-bg">
+                    <img src="img/Foto2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="about-sec" id="about">
+        <h1 class="title">Moja historia</h1>
+        <div class="about-con m-b-10">
+            <div class="story-con story-bubble story-1">
+                <h2>Początki</h2>
+                <p>
+                    Tworzenie aplikacji zacząłem już jako dziecko. 
+                    Początkowo korzystałem z programów typu <i>drag and drop</i>, które pozwalały szybko zobrazować gry powstające w mojej wyobraźni.
+                    Próbowałem swoich sił w <i>Raycasting Game Maker</i>, <i>Multimedia Fusion 2</i>, czy <i>RPG Maker</i>.
+                </p>
+            </div>
+            <div class="story-con story-bubble story-2">
+                <h2>C++</h2>
+                <p>
+                    Następnie poznałem możliwości jakie oferowały języki programowania.
+                    Wybór padł na <i>C++</i> z uwagi na wiele dostępnych materiałów do nauki w tamtym okresie.
+                    Kiedy już nauczyłem się podstaw zabrakło mi wizualnej wartswy aplikacji. 
+                    Zacząłem wtedy naukę bibliotek graficznych, głównie <i>SFML</i>.
+                </p> 
+            </div>
+            <div class="story-con story-bubble story-3">
+                <h2>Unity</h2>
+                <p>
+                    Kolejnym ważnym etapem podczas nauki nowych technologii było dla mnie <i>Unity</i>.
+                    Praca nad grami z grafiką trójwymiarową otwierała niekończące się możliwości rozwoju projektów.
+                    Dodatkowo musiałem nauczyć się nowego języka <i>C#</i>, żeby pisać skrypty.
+                </p> 
+            </div>
+        </div>
+        <div class="about-con">
+            <div class="story-con story-bubble story-4">
+                <h2>WEB</h2>
+                <p>
+                    Wreszcie przyszedł też moment na to, żeby zapoznać się bardziej z budową stron internetowych.
+                    Okazało się, że z pozoru proste do stworzenia, ale jest to tylko czubek góry lodowej.
+                    Poznałem: <br>
+                    - HTML <br>
+                    - CSS, SASS <br>
+                    - JavaScript
+                </p>
+            </div>
+            <div class="story-con story-bubble story-5">
+                <h2>Grafika</h2>
+                <p>
+                    Większość czasu poświęcałem na programowanie, natomiast grafika komputerowa była mi również potrzebna.
+                    Od zawsze wolałem stworzyć własne ilustracje/modele, niż korzystać z <i>assetów</i>.
+                    Pracowałem w programach: <br>
+                    - Blender <br>
+                    - Inkscape <br>
+                    - Gimp <br>
+                    - Photoshop, After Effects <br>
+                </p> 
+            </div>
+            <div class="story-con story-bubble story-6">
+                <h2>Studia</h2>
+                <p>
+                    Finalnie ukończyłem studia na Politechnice Poznańskiej o kierunku <i>Automatyka i Robotyka</i> uzyskując tytuł inżyniera.
+                    W ich trakcie również poznałem nowe dla mnie technologie takie jak: <br>
+                    - język Kotlin <br>
+                    - programowanie PLC<br>
+                    - systemy wizyjne <br>
+                </p> 
+            </div>
+        </div>
+    </section>
+    <section class="projects-sec" id="projects">
+        <h1 class="title">Projekty</h1>
+        <div class="projects-con">
+            <div class="project-card project-oczko">
+                <div class="project-img"></div>
+                <h1>Oczko</h1>
+                <p>
+                    Popularna gra karciana <i>Oczko</i>. 
+                    Masz dwie możliwości - dobierasz kartę albo pasujesz!
+                    Jednak nie jesteś w niej sam, bo na przeciwko Ciebie staje przeciwnik - <i>bot</i>. 
+                    Spróbuj swojego szczęścia!
+                </p>
+                <div class="project-buttons">
+                    <div class="btn-proj github-button">
+                        <i class="fa-brands fa-github"></i>
+                        Github
+                    </div>
+                    <div class="btn-proj btn-livedemo livedemo-button" data-game="oczko">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        Live Demo
+                    </div>
+                </div>
+            </div>
+            <div class="project-card project-square">
+                <div class="project-img"></div>
+                <h1>The Square</h1>
+                <p>
+                    Pomysł na grę znalazłem kiedyś w internecie i zrobiłem ją samodzielnie.
+                    Zasady są proste: uważaj na nadlatujące kwadraty i zbieraj żółte punkty.
+                    Brzmi prosto? To spróbuj zdobyć jak najwięcej punktów!
+                </p>
+                <div class="project-buttons">
+                    <div class="btn-proj github-button">
+                        <i class="fa-brands fa-github"></i>
+                        Github
+                    </div>
+                    <div class="btn-proj btn-livedemo livedemo-button" data-game="square">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        Live Demo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="live-demo-con">
+        <i class="fa-solid fa-xmark live-demo-close"></i>
+        <iframe src="" frameborder="0" class="game"></iframe>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
