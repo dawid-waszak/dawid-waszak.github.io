@@ -1,0 +1,116 @@
+@media screen and (max-width: 1300px) {
+    .header-content {
+        max-width: 100%;
+    }
+    .header-content .left-header .introduction {
+        font-size: 1.5rem;
+    }
+    .my-name {
+        font-size: 3rem;
+    }
+    .header-content .right-header img {
+        width: 13rem;
+    }
+    .header-content .left-header {
+        margin-right: 3rem;
+    }
+    .about-sec{
+        padding: 5rem 1.5rem 1.5rem 1.5rem;
+        justify-content: center;
+        max-width: 100vw;
+    }
+    .about-con {
+        margin-bottom: 10rem;
+    }
+    .story-con {
+        max-width: 30rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .nav-pc{
+        display: none;
+    }
+
+    .nav-mobile{
+        display: flex;
+    }
+
+    .header-content {
+        flex-direction: column-reverse;
+        margin-top: 3rem;
+        min-height: 100vh;
+        max-width: 100vw;
+    }
+    .header-content .left-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    .header-content .left-header .pc-info {
+        display: none;
+    }
+    .header-content .left-header .mobile-info {
+        display: block;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+    .header-content .left-header .introduction {
+        font-size: 1rem;
+    }
+    .header-content .left-header .introduction br {
+        margin-top: -0.5rem;
+    }
+    .my-name {
+        font-size: 2rem;
+        color: var(--color-secondary);
+    }
+    .header-content .right-header .circle-bg {
+        margin-left: 2rem;
+    }
+    .header-content .right-header img {
+        width: 10rem;
+    }
+    .about-sec{
+        padding: 5rem 1rem 1rem 1rem;
+        justify-content: center;
+        max-width: 100vw;
+    }
+    .about-con {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .m-b-10{
+        margin-bottom: 0;
+    }
+    .about-con::before {
+        display: none;
+    }
+    .story-con {
+        max-width: 100%;
+        margin-bottom: 6rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .title{
+        font-size: 2.5rem;
+    }
+    .projects-sec {
+        min-height: 100vh;
+        padding: 3rem 1rem 1rem 1rem;
+    }
+    .projects-con {
+        align-items: center;
+        flex-direction: column;
+    }
+    .project-card {
+        margin-bottom: 2rem;
+    }
+}

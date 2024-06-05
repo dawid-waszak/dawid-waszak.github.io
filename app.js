@@ -1,5 +1,11 @@
 navBtns = document.querySelectorAll('.nav-btn');
 
+mobileNav = document.querySelector('.btns-list');
+
+mobileNavBtns = document.querySelectorAll('.nav-mobile-btn');
+
+mobileHamburger = document.querySelector('.hamburger');
+
 storyBtns = document.querySelectorAll('.btn-story');
 
 btnAbout = document.querySelector('.btn-about');
@@ -58,6 +64,24 @@ function ActiveButton(){
         liveDemoCon.classList.remove('live-demo-active');
         gameFrame.src = "";
     });
+
+    mobileHamburger.addEventListener('click', function(){
+        if(mobileNav.classList.contains('mobile-active')){
+            mobileNav.classList.remove('mobile-active');
+        }
+        else{
+            mobileNav.classList.add('mobile-active');
+        }
+    });
+
+    for(let i=0; i < mobileNavBtns.length; i++){
+        mobileNavBtns[i].addEventListener('click', function(){
+            if(mobileNav.classList.contains('mobile-active')){
+                mobileNav.classList.remove('mobile-active');
+            }
+        });
+    }
+
 }
 
 ActiveButton();

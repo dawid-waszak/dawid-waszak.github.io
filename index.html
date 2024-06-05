@@ -10,7 +10,7 @@
     <title>Portfolio</title>
 </head>
 <body class="main-content">
-    <nav>
+    <nav class="nav-pc">
         <div class="nav-btn nav-home active-btn" data-id="home">
             <i class="fa-solid fa-house"></i> Strona główna
         </div>
@@ -24,11 +24,21 @@
             <i class="fa-solid fa-envelope"></i> Kontakt
         </div>
     </nav>
+    <nav class="nav-mobile">
+        <i class="fa-solid fa-bars hamburger"></i>
+        <ul class="btns-list">
+            <li><a href="#home" class="nav-mobile-btn">Strona Główna</a></li>
+            <li><a href="#about" class="nav-mobile-btn">O mnie</a></li>
+            <li><a href="#projects" class="nav-mobile-btn">Projekty</a></li>
+            <li><a href="#contact" class="nav-mobile-btn">Kontakt</a></li>
+        </ul>
+    </nav>
     <header id="home">
         <div class="header-content">
             <div class="left-header">
                 <h1 class="introduction">Cześć, jestem <br><span class="my-name">Dawid Waszak</span></h1>
-                <p>Od dziecka zainteresowałem się programowaniem. Zaczynałem od tworzenia gier w programach typu <i>Raycasting Game Maker</i>, czy <i>Multimedia Fusion 2</i>. Natomiast później zgłębiałem wiedzę dotyczącą języków programowania...</p>
+                <p class="mobile-info">Od dziecka zainteresowałem się programowaniem. Uczyłem się wielu technologi, głównie tworząc gry komputerowe...</p>
+                <p class="pc-info">Od dziecka zainteresowałem się programowaniem. Zaczynałem od tworzenia gier w programach typu <i>Raycasting Game Maker</i>, czy <i>Multimedia Fusion 2</i>. Natomiast później zgłębiałem wiedzę dotyczącą języków programowania...</p>
                 <div class="btn-con btn-about">
                     Dowiedz się więcej
                 </div>

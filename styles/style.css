@@ -63,24 +63,105 @@ a {
   margin-bottom: 6rem;
 }
 
-nav {
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.anim {
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+.anim-left {
+  transform: translateX(-100%);
+}
+
+.anim-right {
+  transform: translateX(100%);
+}
+
+.anim-up {
+  transform: translateY(-100%);
+}
+
+.anim-scale {
+  transform: scale(0);
+}
+
+.slide-left-anim {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-right-anim {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-up-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scale-in-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav-pc {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  display: flex;
   padding: 2rem;
+  display: flex;
   justify-content: center;
   z-index: 10;
 }
-nav .nav-btn {
+.nav-pc .nav-btn {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-nav .nav-btn:hover {
+.nav-pc .nav-btn:hover {
   cursor: pointer;
 }
-nav::before {
+.nav-pc::before {
   content: "";
   position: fixed;
   width: 100%;
@@ -91,6 +172,56 @@ nav::before {
   background-color: var(--color-primary);
   opacity: 0.9;
   z-index: -1;
+}
+
+.nav-mobile {
+  display: none;
+  position: fixed;
+  justify-content: end;
+  font-size: 2rem;
+  padding: 1.5rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform-origin: center;
+}
+.nav-mobile .hamburger:hover {
+  color: #aaa;
+  cursor: pointer;
+}
+.nav-mobile .btns-list {
+  font-size: 1.1rem;
+  display: none;
+  position: fixed;
+  width: 100vw;
+  top: 5rem;
+  left: 0;
+  text-align: center;
+  z-index: 8;
+}
+.nav-mobile .btns-list li {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: var(--color-grey1);
+}
+.nav-mobile::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 2.5rem;
+  background-color: var(--color-grey1);
+  opacity: 1;
+  z-index: -1;
+}
+
+.mobile-active {
+  display: block !important;
+  animation-name: slideRight;
+  animation-duration: 0.2s;
 }
 
 .btn-con {
@@ -109,7 +240,7 @@ nav::before {
 
 header {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -153,6 +284,9 @@ header::before {
   display: block;
   content: "";
   margin-top: -0.9rem;
+}
+.header-content .left-header .mobile-info {
+  display: none;
 }
 .header-content .left-header p {
   margin-bottom: 5rem;
