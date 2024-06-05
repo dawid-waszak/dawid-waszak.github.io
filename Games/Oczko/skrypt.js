@@ -23,6 +23,13 @@ var spasuj = false;
 
 var passPrzeciwnika = false;
 
+window.addEventListener("keydown", function(e) { 
+	if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) { 
+		e.preventDefault();
+		e.stopPropagation(); 
+	} 
+}, false);
+
 function Sleep(ms)
 {
 	return new Promise(resolve => setTimeout(resolve, ms));

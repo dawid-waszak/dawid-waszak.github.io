@@ -418,16 +418,22 @@ header::before {
 }
 
 .projects-con {
-  display: flex;
+  display: grid;
+  margin: auto;
   justify-content: center;
+  align-items: center;
+  row-gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
 
 .project-card {
+  justify-self: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   max-width: 25rem;
+  min-height: 32rem;
   padding: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -459,6 +465,14 @@ header::before {
 
 .project-square .project-img {
   background-image: url(../img/Projekty/TheSquare.png);
+}
+
+.project-jam .project-img {
+  background-image: url("../img/Projekty/Zombie.png");
+}
+
+.project-card-game .project-img {
+  background-image: url("../img/Projekty/CardGame.png");
 }
 
 .btn-proj:hover {
@@ -523,7 +537,10 @@ header::before {
 .live-demo-con {
   display: none;
   position: fixed;
-  width: 60vw;
+  overflow: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 80vw;
   height: 80vh;
   top: 50%;
   left: 50%;

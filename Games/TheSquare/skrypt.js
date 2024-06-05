@@ -18,6 +18,13 @@ var meteoryty = [];
 
 var koniecGry = false;
 
+window.addEventListener("keydown", function(e) { 
+	if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) { 
+		e.preventDefault();
+		e.stopPropagation(); 
+	} 
+}, false);
+
 function drawStroked(text, x, y)
 {
 	ctx.textAlign = "center";

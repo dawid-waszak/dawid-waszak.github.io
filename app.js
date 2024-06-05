@@ -24,7 +24,20 @@ liveDemoCon = document.querySelector('.live-demo-con');
 
 liveDemoCloseBtn = document.querySelector('.live-demo-close');
 
+body = document.querySelector('body');
+
 var activePage = 1;
+
+var gameWindowActive = false;
+
+window.addEventListener("keydown", function(e) { 
+    if(gameWindowActive == true){
+        if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) { 
+            e.preventDefault();
+            e.stopPropagation(); 
+        } 
+    }
+}, false);
 
 btnAbout.addEventListener('click', ()=>{
     document.querySelector('.nav-about').click();
@@ -55,7 +68,17 @@ function ActiveButton(){
                         liveDemoCon.classList.add('live-demo-active');
                         gameFrame.src = "Games/TheSquare/square.html";break;
                     }
+                    case "jam":{
+                        liveDemoCon.classList.add('live-demo-active');
+                        gameFrame.src = "Games/WEB/game-jam.html";break;
+                    }
+                    case "card":{
+                        liveDemoCon.classList.add('live-demo-active');
+                        gameFrame.src = "Games/CARD_GAME/card.html";break;
+                    }
                 }
+                gameWindowActive = true;
+                gameFrame.focus();
             }
         });
     }
@@ -63,6 +86,7 @@ function ActiveButton(){
     liveDemoCloseBtn.addEventListener('click', function(){
         liveDemoCon.classList.remove('live-demo-active');
         gameFrame.src = "";
+        gameWindowActive = false;
     });
 
     mobileHamburger.addEventListener('click', function(){
