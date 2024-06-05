@@ -426,7 +426,7 @@ header::before {
 
 .projects-sec{
     min-height: 100vh;
-    padding: 8rem;
+    padding: 5.5rem 8rem 8rem 8rem;
 }
 
 .projects-con{
@@ -484,6 +484,58 @@ header::before {
     transition: all .2s ease-in-out;
     color: var(--color-secondary);
     cursor: pointer;
+}
+
+// CONTACT SECTION
+.contact-sec{
+    padding: 5.5rem;
+    background-color: var(--color-section);
+}
+
+.contact-con{
+    display: flex;
+    margin: auto;
+    max-width: 50rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    background-color: var(--color-secondary-dark);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10rem;
+    text-align: center;
+    img{
+        max-width: 30rem;
+        clip-path: polygon(55% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.copy-alert{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.7rem;
+    color: white;
+    background-color: var(--color-primary);
+    padding: 0.2rem;
+    padding-bottom: 0.5rem;
+    transform: translateY(-100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.alert-active{
+    display: block;
+}
+
+.contact-btn{
+    position: relative;
+    transition: all .2s ease-in-out;
+    margin-left: 2rem;
+    &:hover{
+        color: var(--color-secondary);
+        cursor: pointer;
+    }
 }
 
 // LIVE DEMO

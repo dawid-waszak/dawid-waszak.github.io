@@ -113,4 +113,24 @@
     .project-card {
         margin-bottom: 2rem;
     }
+
+    .contact-sec{
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    .contact-con{
+        flex-direction: column;
+        max-width: fit-content;
+    }
+
+    .contact-con .contact-btn{
+        padding: 2rem;
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    .contact-con img{
+        clip-path: none;
+    }
 }

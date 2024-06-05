@@ -85,3 +85,21 @@ function ActiveButton(){
 }
 
 ActiveButton();
+
+mailBtn = document.querySelector('.contact-btn');
+copyAlert = document.querySelector('.copy-alert');
+
+mailBtn.addEventListener('click', () =>{
+    navigator.clipboard.writeText(mailBtn.dataset.contact);
+    copyAlert.value = "Skopiowano";
+    if(!copyAlert.classList.contains('alert-active')){
+        copyAlert.classList.add('alert-active');
+    }
+});
+
+mailBtn.addEventListener('mouseleave', () =>{
+    if(copyAlert.classList.contains('alert-active')){
+        copyAlert.classList.remove('alert-active');
+        copyAlert.value = "";
+    }
+});
