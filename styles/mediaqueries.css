@@ -113,10 +113,15 @@
     }
     .project-card {
         margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .project-card h1{
+        font-size: 1.5rem;
     }
 
     .contact-sec{
-        padding: 1rem;
+        padding: 5rem;
         overflow: hidden;
     }
 
