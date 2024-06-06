@@ -18,6 +18,8 @@ nextBtn = document.querySelector('.btn-next');
 
 liveDemoBtns = document.querySelectorAll('.btn-livedemo');
 
+githubBtns = document.querySelectorAll('.github-button');
+
 gameFrame = document.querySelector('.game');
 
 liveDemoCon = document.querySelector('.live-demo-con');
@@ -79,6 +81,17 @@ function ActiveButton(){
                 }
                 gameWindowActive = true;
                 gameFrame.focus();
+            }
+        });
+    }
+
+    for(let i=0; i < githubBtns.length; i++){
+        githubBtns[i].addEventListener('click', function(){
+            switch(String(this.dataset.game)){
+                case "oczko": window.open("https://github.com/dawid-waszak/oczko-js", '_blank').focus();break;
+                case "square": window.open("https://github.com/dawid-waszak/the-square-js", '_blank').focus();break;
+                case "jam": window.open("https://github.com/dawid-waszak/zombie-apocalypse-Unity3d", '_blank').focus(); break;
+                case "card": window.open("https://github.com/dawid-waszak/card-hero-unity3d", '_blank').focus; break;
             }
         });
     }
