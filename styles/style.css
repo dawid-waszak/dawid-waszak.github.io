@@ -387,14 +387,14 @@ header::before {
   justify-self: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   max-width: 25rem;
-  min-height: 34rem;
   padding: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 2rem;
+  gap: 1rem;
   background-color: #1f1f1e;
   box-shadow: 0px 0px 10px rgba(17, 17, 17, 0.5);
 }
@@ -418,6 +418,7 @@ header::before {
   max-width: 20rem;
   margin-bottom: 2rem;
   text-align: center;
+  min-height: 8rem;
 }
 .project-card .project-buttons {
   width: 100%;
@@ -440,6 +441,11 @@ header::before {
 
 .project-card-game .project-img {
   background-image: url("../img/Projekty/CardGame.png");
+}
+
+.project-card-todo .project-img {
+  background-image: url("../img/Projekty/ToDo.png");
+  background-size: cover;
 }
 
 .btn-proj {
