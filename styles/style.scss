@@ -6,6 +6,21 @@
     scroll-behavior: smooth;
 }
 
+button{
+    transition: all .2s ease-in-out;
+    width: fit-content;
+    padding: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    background-color: rgba(0,0,0,0);
+    &:hover{
+        cursor: pointer;
+        background-color: var(--color-secondary-dark);
+    }
+}
+
 :root{
     --color-primary: #131313;
     --color-secondary: #FFD369;
@@ -28,6 +43,7 @@ body{
 }
 
 a{
+    transition: all .2s ease-in-out;
     display: inline-block;
     text-decoration: none;
     color: inherit;
@@ -35,7 +51,7 @@ a{
 }
 
 .active-btn{
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
     color: var(--color-secondary);
 }
 
@@ -74,78 +90,21 @@ a{
     }
 }
 
-@keyframes slideLeft{
-    0%{
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp{
-    0%{
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes scaleIn{
-    0%{
-        transform: scale(0);
-        opacity: 0;
-    }
-    100%{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.anim{
-    transition: all 1s ease-in-out;
+.hidden{
+    transition: all 1s;
     opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-200px);
 }
 
-.anim-left{
-    transform: translateX(-100%);
+.hiddenR{
+    transform: translateX(200px);
 }
 
-.anim-right{
-    transform: translateX(100%);
-}
-
-.anim-up{
-    transform: translateY(-100%);
-}
-
-.anim-scale{
-    transform: scale(0);
-}
-
-.slide-left-anim{
+.show{
     opacity: 1;
+    filter: blur(0);
     transform: translateX(0);
-}
-
-.slide-right-anim{
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.slide-up-anim{
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.scale-in-anim{
-    opacity: 1;
-    transform: scale(1);
 }
 
 // NAVBAR
@@ -163,6 +122,7 @@ a{
         padding-right: 3rem;
         &:hover{
             cursor: pointer;
+            color: var(--color-secondary-dark);
         }
     }
     &::before{
@@ -230,16 +190,12 @@ a{
 }
 
 // MAIN BUTTON
-.btn-con{
-    transition: all .2s ease-in-out;
-    width: fit-content;
+.header-btn{
     padding: 1rem;
     border-radius: 30px;
     border-style: solid;
     border-color: var(--color-secondary);
-    //background-color: var(--color-secondary);
     &:hover{
-        cursor: pointer;
         background-color: var(--color-secondary-dark);
     }
 }
@@ -291,11 +247,8 @@ header::before {
                 margin-top: -0.9rem;
             }
         }
-        .mobile-info{
-            display: none;
-        }
         p{
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
         }
     }
     .right-header{
@@ -364,7 +317,8 @@ header::before {
     margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-light);
+    box-shadow: 0px 0px 15px rgba($color: black, $alpha: 0.8);
     padding: 2rem;
     border-radius: 20px;
     &::before{
@@ -430,12 +384,11 @@ header::before {
 }
 
 .projects-con{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
     justify-content: center;
     align-items: center;
-    row-gap: 5rem;
-    grid-template-columns: repeat(auto-fit,  minmax(25rem, 1fr)) ;
 }
 
 .project-card{
@@ -445,12 +398,21 @@ header::before {
     justify-content: space-between;
     align-items: center;
     max-width: 25rem;
-    min-height: 32rem;
+    min-height: 34rem;
     padding: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    border-radius: 20px;
-    background-color: var(--color-light);
+    margin-bottom: 2rem;
+    background-color: #1f1f1e;
+    box-shadow: 0px 0px 10px rgba($color: #111, $alpha: 0.5);
+    .technologie{
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
     .project-img{
         width: 80%;
         height: 12rem;
@@ -471,6 +433,7 @@ header::before {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -498,58 +461,39 @@ header::before {
     }
 }
 
-.btn-proj:hover{
-    transition: all .2s ease-in-out;
-    color: var(--color-secondary);
-    cursor: pointer;
+.btn-proj{
+    border: none;
+    padding: 0;
+    &:hover{
+        transition: all .2s ease-in-out;
+        background-color: rgba(0,0,0,0);
+        color: var(--color-secondary);
+        cursor: pointer;
+    }
 }
 
 // CONTACT SECTION
 .contact-sec{
-    padding: 5.5rem;
+    padding: 5.5rem 5.5rem 10rem 5.5rem;
     background-color: var(--color-section);
 }
 
 .contact-con{
-    display: flex;
     margin: auto;
-    max-width: 50rem;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    background-color: var(--color-secondary-dark);
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
     text-align: center;
-    img{
-        max-width: 30rem;
-        clip-path: polygon(55% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-}
-
-.copy-alert{
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 0.7rem;
-    color: white;
-    background-color: var(--color-primary);
-    padding: 0.2rem;
-    padding-bottom: 0.5rem;
-    transform: translateY(-100%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-}
-
-.alert-active{
-    display: block;
 }
 
 .contact-btn{
     position: relative;
     transition: all .2s ease-in-out;
-    margin-left: 2rem;
+    padding: 1rem 3rem 1rem 3rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-light);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba($color: #111, $alpha: 0.5);
     &:hover{
         color: var(--color-secondary);
         cursor: pointer;
@@ -589,4 +533,8 @@ header::before {
 
 .live-demo-active{
     display: block !important;
+}
+
+.hide{
+    background-color: red;
 }

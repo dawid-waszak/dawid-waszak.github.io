@@ -8,8 +8,6 @@ mobileHamburger = document.querySelector('.hamburger');
 
 storyBtns = document.querySelectorAll('.btn-story');
 
-btnAbout = document.querySelector('.btn-about');
-
 secAbout = document.querySelectorAll('.story-sec');
 
 prevBtn = document.querySelector('.btn-prev');
@@ -17,8 +15,6 @@ prevBtn = document.querySelector('.btn-prev');
 nextBtn = document.querySelector('.btn-next');
 
 liveDemoBtns = document.querySelectorAll('.btn-livedemo');
-
-githubBtns = document.querySelectorAll('.github-button');
 
 gameFrame = document.querySelector('.game');
 
@@ -41,20 +37,7 @@ window.addEventListener("keydown", function(e) {
     }
 }, false);
 
-btnAbout.addEventListener('click', ()=>{
-    document.querySelector('.nav-about').click();
-});
-
 function ActiveButton(){
-    // Navigation bar
-    for(let i=0; i < navBtns.length; i++){
-        navBtns[i].addEventListener('click', function(){
-            document.querySelector('.active-btn').classList.remove('active-btn');
-            this.classList.add('active-btn');
-            const element = document.getElementById(this.dataset.id);
-            element.scrollIntoView();
-        });
-    }
 
     // Live demo
     for(let i=0; i < liveDemoBtns.length; i++){
@@ -81,17 +64,6 @@ function ActiveButton(){
                 }
                 gameWindowActive = true;
                 gameFrame.focus();
-            }
-        });
-    }
-
-    for(let i=0; i < githubBtns.length; i++){
-        githubBtns[i].addEventListener('click', function(){
-            switch(String(this.dataset.game)){
-                case "oczko": window.open("https://github.com/dawid-waszak/oczko-js", '_blank').focus();break;
-                case "square": window.open("https://github.com/dawid-waszak/the-square-js", '_blank').focus();break;
-                case "jam": window.open("https://github.com/dawid-waszak/zombie-apocalypse-Unity3d", '_blank').focus(); break;
-                case "card": window.open("https://github.com/dawid-waszak/card-hero-unity3d", '_blank').focus; break;
             }
         });
     }
@@ -123,20 +95,47 @@ function ActiveButton(){
 
 ActiveButton();
 
-mailBtn = document.querySelector('.contact-btn');
-copyAlert = document.querySelector('.copy-alert');
+const hidden_elements = document.querySelectorAll('.hidden');
 
-mailBtn.addEventListener('click', () =>{
-    navigator.clipboard.writeText(mailBtn.dataset.contact);
-    copyAlert.value = "Skopiowano";
-    if(!copyAlert.classList.contains('alert-active')){
-        copyAlert.classList.add('alert-active');
-    }
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+        else{
+            entry.target.classList.remove('show')
+        }
+    })
 });
 
-mailBtn.addEventListener('mouseleave', () =>{
-    if(copyAlert.classList.contains('alert-active')){
-        copyAlert.classList.remove('alert-active');
-        copyAlert.value = "";
-    }
+hidden_elements.forEach(item => {
+    observer.observe(item);
+});
+
+function isScrolledIntoView(el) {
+    var rect = el.getBoundingClientRect();
+    var elemTop = rect.top;
+    var elemBottom = rect.bottom;
+
+    var isVisible = (elemTop <= window.innerHeight * 0.5) && (elemBottom >= window.innerHeight * 0.5);
+    
+    return isVisible;
+}
+
+const sections = Array.from(document.querySelectorAll("section"));
+const header = document.querySelector("header");
+
+sections.push(header);
+
+document.addEventListener("scroll", (event) => {
+    sections.forEach(item => {
+        if(isScrolledIntoView(item)){
+            navBtns.forEach(btn => {
+                if(item.id == btn.dataset.id){
+                    document.querySelector('.active-btn').classList.remove('active-btn');
+                    btn.classList.add('active-btn'); return;
+                }
+            });
+        }
+    })
 });

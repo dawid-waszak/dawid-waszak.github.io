@@ -11,18 +11,18 @@
 </head>
 <body class="main-content">
     <nav class="nav-pc">
-        <div class="nav-btn nav-home active-btn" data-id="home">
+        <a class="nav-btn active-btn" href="#home" data-id="home">
             <i class="fa-solid fa-house"></i> Strona główna
-        </div>
-        <div class="nav-btn nav-about" data-id="about">
+        </a>
+        <a class="nav-btn" href="#about" data-id="about">
             <i class="fa-solid fa-user"></i> O mnie
-        </div>
-        <div class="nav-btn nav-projects" data-id="projects">
+        </a>
+        <a class="nav-btn" href="#projects" data-id="projects">
             <i class="fa-solid fa-folder"></i> Projekty
-        </div>
-        <div class="nav-btn nav-contact" data-id="contact">
+        </a>
+        <a class="nav-btn" href="#contact" data-id="contact">
             <i class="fa-solid fa-envelope"></i> Kontakt
-        </div>
+        </a>
     </nav>
     <nav class="nav-mobile">
         <i class="fa-solid fa-bars hamburger"></i>
@@ -35,15 +35,14 @@
     </nav>
     <header id="home">
         <div class="header-content">
-            <div class="left-header">
+            <div class="left-header hidden">
                 <h1 class="introduction">Cześć, jestem <br><span class="my-name">Dawid Waszak</span></h1>
-                <p class="mobile-info">Od dziecka zainteresowałem się programowaniem. Uczyłem się wielu technologi, głównie tworząc gry komputerowe...</p>
-                <p class="pc-info">Od dziecka zainteresowałem się programowaniem. Zaczynałem od tworzenia gier w programach typu <i>Raycasting Game Maker</i>, czy <i>Multimedia Fusion 2</i>. Natomiast później zgłębiałem wiedzę dotyczącą języków programowania...</p>
-                <div class="btn-con btn-about">
+                <p>Od dziecka zainteresowałem się programowaniem. Zaczynałem od tworzenia gier, a później uczyłem się różnych języków, takich jak: <i>C++</i>, <i>C#</i>, czy <i>JavaScript</i>.</p>
+                <a class="header-btn btn-about" href="#about" role="button">
                     Dowiedz się więcej
-                </div>
+                </a>
             </div>
-            <div class="right-header">
+            <div class="right-header hidden hiddenR">
                 <div class="circle-bg">
                     <img src="img/Foto2.png" alt="">
                 </div>
@@ -53,7 +52,7 @@
     <section class="about-sec" id="about">
         <h1 class="title">Moja historia</h1>
         <div class="about-con m-b-10">
-            <div class="story-con story-bubble story-1">
+            <div class="story-con story-bubble story-1 hidden">
                 <h2>Początki</h2>
                 <p>
                     Tworzenie aplikacji zacząłem już jako dziecko. 
@@ -61,7 +60,7 @@
                     Próbowałem swoich sił w <i>Raycasting Game Maker</i>, <i>Multimedia Fusion 2</i>, czy <i>RPG Maker</i>.
                 </p>
             </div>
-            <div class="story-con story-bubble story-2">
+            <div class="story-con story-bubble story-2 hidden">
                 <h2>C++</h2>
                 <p>
                     Następnie poznałem możliwości jakie oferowały języki programowania.
@@ -70,7 +69,7 @@
                     Zacząłem wtedy naukę bibliotek graficznych, głównie <i>SFML</i>.
                 </p> 
             </div>
-            <div class="story-con story-bubble story-3">
+            <div class="story-con story-bubble story-3 hidden">
                 <h2>Unity</h2>
                 <p>
                     Kolejnym ważnym etapem podczas nauki nowych technologii było dla mnie <i>Unity</i>.
@@ -80,18 +79,19 @@
             </div>
         </div>
         <div class="about-con">
-            <div class="story-con story-bubble story-4">
+            <div class="story-con story-bubble story-4 hidden hiddenR">
                 <h2>WEB</h2>
                 <p>
                     Wreszcie przyszedł też moment na to, żeby zapoznać się bardziej z budową stron internetowych.
                     Okazało się, że z pozoru proste do stworzenia, ale jest to tylko czubek góry lodowej.
                     Poznałem: <br>
                     - HTML <br>
-                    - CSS, SASS <br>
-                    - JavaScript
+                    - CSS, SCSS <br>
+                    - JavaScript <br>
+                    - Reactjs.
                 </p>
             </div>
-            <div class="story-con story-bubble story-5">
+            <div class="story-con story-bubble story-5 hidden hiddenR">
                 <h2>Grafika</h2>
                 <p>
                     Większość czasu poświęcałem na programowanie, natomiast grafika komputerowa była mi również potrzebna.
@@ -100,17 +100,17 @@
                     - Blender <br>
                     - Inkscape <br>
                     - Gimp <br>
-                    - Photoshop, After Effects <br>
+                    - Photoshop, After Effects.
                 </p> 
             </div>
-            <div class="story-con story-bubble story-6">
+            <div class="story-con story-bubble story-6 hidden hiddenR">
                 <h2>Studia</h2>
                 <p>
                     Finalnie ukończyłem studia na Politechnice Poznańskiej o kierunku <i>Automatyka i Robotyka</i> uzyskując tytuł inżyniera.
                     W ich trakcie również poznałem nowe dla mnie technologie takie jak: <br>
                     - język Kotlin <br>
                     - programowanie PLC<br>
-                    - systemy wizyjne <br>
+                    - systemy wizyjne. <br>
                 </p> 
             </div>
         </div>
@@ -118,7 +118,12 @@
     <section class="projects-sec" id="projects">
         <h1 class="title">Projekty</h1>
         <div class="projects-con">
-            <div class="project-card project-oczko">
+            <div class="project-card project-oczko hidden">
+                <div class="technologie">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-js"></i>
+                </div>
                 <div class="project-img"></div>
                 <h1>Oczko</h1>
                 <p>
@@ -128,17 +133,22 @@
                     Spróbuj swojego szczęścia!
                 </p>
                 <div class="project-buttons">
-                    <div class="btn-proj github-button" data-game="oczko">
+                    <a class="btn-proj github-button" href="https://github.com/dawid-waszak/oczko-js" target="_blank">
                         <i class="fa-brands fa-github"></i>
                         Github
-                    </div>
-                    <div class="btn-proj btn-livedemo livedemo-button" data-game="oczko">
+                    </a>
+                    <button class="btn-proj btn-livedemo livedemo-button" data-game="oczko">
                         <i class="fa-solid fa-arrow-up"></i>
                         Live Demo
-                    </div>
+                    </button>
                 </div>
             </div>
-            <div class="project-card project-square">
+            <div class="project-card project-square hidden">
+                <div class="technologie">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-js"></i>
+                </div>
                 <div class="project-img"></div>
                 <h1>The Square</h1>
                 <p>
@@ -147,17 +157,22 @@
                     Brzmi prosto? To spróbuj zdobyć jak najwięcej punktów!
                 </p>
                 <div class="project-buttons">
-                    <div class="btn-proj github-button" data-game="square">
+                    <a class="btn-proj github-button" href="https://github.com/dawid-waszak/the-square-js" target="_blank">
                         <i class="fa-brands fa-github"></i>
                         Github
-                    </div>
-                    <div class="btn-proj btn-livedemo livedemo-button" data-game="square">
+                    </a>
+                    <button class="btn-proj btn-livedemo livedemo-button" data-game="square">
                         <i class="fa-solid fa-arrow-up"></i>
                         Live Demo
-                    </div>
+                    </button>
                 </div>
             </div>
-            <div class="project-card project-jam">
+            <div class="project-card project-jam hidden">
+                <div class="technologie">
+                    <i class="fa-brands fa-unity"></i>
+                    <span>C#</span>
+                    <span>Blender</span>
+                </div>
                 <div class="project-img"></div>
                 <h1>Zombie Apocalypse</h1>
                 <p>
@@ -169,17 +184,22 @@
                     1 i 2 - zmiana broni.
                 </p>
                 <div class="project-buttons">
-                    <div class="btn-proj github-button" data-game="jam">
+                    <a class="btn-proj github-button" href="https://github.com/dawid-waszak/zombie-apocalypse-Unity3d" target="_blank">
                         <i class="fa-brands fa-github"></i>
                         Github
-                    </div>
-                    <div class="btn-proj btn-livedemo livedemo-button" data-game="jam">
+                    </a>
+                    <button class="btn-proj btn-livedemo livedemo-button" data-game="jam">
                         <i class="fa-solid fa-arrow-up"></i>
                         Live Demo
-                    </div>
+                    </button>
                 </div>
             </div>
-            <div class="project-card project-card-game">
+            <div class="project-card project-card-game hidden">
+                <div class="technologie">
+                    <i class="fa-brands fa-unity"></i>
+                    <span>C#</span>
+                    <span>Blender</span>
+                </div>
                 <div class="project-img"></div>
                 <h1>Card Hero</h1>
                 <p>
@@ -189,27 +209,29 @@
                     Pobijaj rekordy i baw się dobrze!
                 </p>
                 <div class="project-buttons">
-                    <div class="btn-proj github-button" data-game="card">
+                    <a class="btn-proj github-button" href="https://github.com/dawid-waszak/card-hero-unity3d" target="_blank">
                         <i class="fa-brands fa-github"></i>
                         Github
-                    </div>
-                    <div class="btn-proj btn-livedemo livedemo-button" data-game="card">
+                    </a>
+                    <button class="btn-proj btn-livedemo livedemo-button" data-game="card">
                         <i class="fa-solid fa-arrow-up"></i>
                         Live Demo
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
     <section class="contact-sec" id="contact">
         <h1 class="title">Kontakt</h1>
-        <div class="contact-con">
-            <div class="contact-btn" data-contact="dawid.waszak21@gmail.com">
-                <span class="copy-alert">Skopiowano do schowka</span>
+        <div class="contact-con hidden">
+            <a class="contact-btn" href="mailto: dawid.waszak21@gmail.com">
                 <i class="fa-solid fa-envelope"></i>
                 dawid.waszak21@gmail.com
-            </div>
-            <img src="img/pexels-goumbik-574070.jpg" alt="">
+            </a>
+            <a class="contact-btn" href="https://github.com/dawid-waszak" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                https://github.com/dawid-waszak
+            </a>
         </div>
     </section>
     <div class="live-demo-con">

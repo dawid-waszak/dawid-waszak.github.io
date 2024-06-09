@@ -40,7 +40,7 @@
 
     .header-content {
         flex-direction: column-reverse;
-        margin-top: 0rem;
+        margin-top: 3rem;
         min-height: 100vh;
         max-width: 100vw;
     }
@@ -53,10 +53,7 @@
         text-align: center;
         margin-bottom: 5rem;
     }
-    .header-content .left-header .pc-info {
-        display: none;
-    }
-    .header-content .left-header .mobile-info {
+    .header-content .left-header p {
         display: block;
         font-size: 0.9rem;
         margin-bottom: 2rem;
@@ -86,6 +83,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 0;
     }
     .m-b-10{
         margin-bottom: 0;
@@ -109,7 +107,6 @@
     .projects-con {
         align-items: center;
         flex-direction: column;
-        grid-template-columns: none;
     }
     .project-card {
         margin-bottom: 2rem;
@@ -121,22 +118,17 @@
     }
 
     .contact-sec{
-        padding: 5rem;
+        padding: 5rem 2rem 6rem 2rem;
         overflow: hidden;
     }
 
     .contact-con{
-        flex-direction: column;
-        max-width: fit-content;
+        max-width: 100%;
     }
 
     .contact-con .contact-btn{
-        padding: 2rem;
+        padding: 1rem;
         margin-left: 0;
-        font-size: 0.8rem;
-    }
-
-    .contact-con img{
-        clip-path: none;
+        font-size: 0.9rem;
     }
 }
