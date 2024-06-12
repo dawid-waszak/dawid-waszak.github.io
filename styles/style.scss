@@ -469,6 +469,13 @@ header::before {
     }
 }
 
+.project-card{
+    img{
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+}
+
 .btn-proj{
     border: none;
     padding: 0;

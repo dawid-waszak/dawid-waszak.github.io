@@ -448,6 +448,11 @@ header::before {
   background-size: cover;
 }
 
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
 .btn-proj {
   border: none;
   padding: 0;
